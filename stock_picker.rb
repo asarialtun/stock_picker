@@ -12,26 +12,23 @@ def stock_picker(prices)
   
   result = Array.new
   b=-1
-  while -b < length-1
+  while (-b < length-1)&&(result.size<2)
     for a in 0..length-1
-      if positions[a] < positions[b] #b starts at -1, a at 0
+      if positions[a] < positions[b] #check whether the smallest number has a smallar index then biggest number
         buy_price = sorted_prices[a]
         sell_price = sorted_prices[b]
         buy_index = prices.index(buy_price)
         sell_index = prices.rindex(sell_price)
         result << buy_index
         result << sell_index
-        break
       end #if
+      break
     end #for
     b= b-1
   end #while
-  
-  print result[0..1].to_s+"\n"
-  return result[0..1]
-  
+  print result.to_s+"\n"
+  return result
 end #stock_picker
-
 
 test_array = [1,20,2,7,1,8,19,1]
 stock_picker(test_array)
