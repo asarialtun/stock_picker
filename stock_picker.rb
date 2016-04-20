@@ -1,4 +1,3 @@
-
 def stock_picker(prices)
   length = prices.size
   positions= Array.new
@@ -32,3 +31,4 @@ end #stock_picker
 
 test_array = [1,20,2,7,1,8,19,1]
 stock_picker(test_array)
+q
