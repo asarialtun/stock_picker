@@ -29,6 +29,5 @@ def stock_picker(prices)
   return result
 end #stock_picker
 
-test_array = [1,20,2,7,1,8,19,1]
+test_array = [17,3,6,9,15,8,6,1,10]
 stock_picker(test_array)
-q
